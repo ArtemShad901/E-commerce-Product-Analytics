@@ -69,18 +69,18 @@ product-analytics/
    python scripts/data_download.py
    jupyter notebook notebook/
 ```
-порядок запуска ноутбуков 
+Порядок запуска ноутбуков: 
 `01_eda.ipynb` → `02_metrics_analysis.ipynb` → `03_cohort_analysis.ipynb` → `04_rfm.ipynb`
 
 
-### Что было сделано в ходе проекта : 
+### Что было сделано в ходе проекта: 
 ---
 
 | Компонент             | Описание                                                                                                                          | Где в коде                              |
 | --------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------- |
-| ** Модуль метрик**    | Параметризуемый движок расчёта 10+ продуктовых метрик (APRAU, Stickiness, Pareto, CR, AOV и др.)                                  | `src/metrics.py`                        |
+| **Модуль метрик**    | Параметризуемый движок расчёта 10+ продуктовых метрик (APRAU, Stickiness, Pareto, CR, AOV и др.)                                  | `src/metrics.py`                        |
 | **ETL & Data Marts**  | 4-слойная архитектура витрин (`staging → user/session/revenue_mart`) на SQLite с чётким разделением сырых и агрегированных данных | `SQL/`, `database/`                     |
 | **RFM-пайплайн**      | Автоматическая сегментация базы через квантильный скоринг + бизнес-правила кластеризации (VIP, Loyal, New, At Risk, Regular)      | `src/utils.py`, `notebook/04_rfm.ipynb` |
-| ** Retention-анализ** | Расчёт exact/windowed retention с настраиваемым окном ±N дней для корректного учёта цикличности возвратов                         | `notebook/03_cohort_analysis.ipynb`     |
-| **Бизнес-отчёт**      | Executive summary, разбор монетизации, карта гипотез и                                                                            | `report/Product_Analytics_Report.pdf`   |
+| **Retention-анализ** | Расчёт exact/windowed retention с настраиваемым окном ±N дней для корректного учёта цикличности возвратов                         | `notebook/03_cohort_analysis.ipynb`     |
+| **Бизнес-отчёт**      | Executive summary, разбор монетизации, карта гипотез и рекомендации по росту ключевых метрик                                                                            | `report/Product_Analytics_Report.pdf`   |
 
